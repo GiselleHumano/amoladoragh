@@ -214,39 +214,34 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /**
-   * Clients Slider
-   */
-  new Swiper('.clients-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-        spaceBetween: 40
-      },
-      480: {
-        slidesPerView: 3,
-        spaceBetween: 60
-      },
-      640: {
-        slidesPerView: 4,
-        spaceBetween: 80
-      },
-      992: {
-        slidesPerView: 6,
-        spaceBetween: 120
-      }
-    }
-  });
-
-  /**
    * Testimonials Slider
    */
+
+// Obtener todas las imágenes de testimonios
+var testimonialImages = document.querySelectorAll('.testimonial-img');
+
+// Iterar sobre cada imagen y agregar evento de clic
+testimonialImages.forEach(function(image) {
+  image.addEventListener('click', function() {
+    // Obtener el elemento padre (testimonial-item)
+    var testimonialItem = this.closest('.testimonial-item');
+
+    // Obtener el elemento del comentario dentro del testimonial-item
+    var comment = testimonialItem.querySelector('.texto p');
+
+    // Obtener los elementos h3 y h4 dentro del testimonial-item
+    var name = testimonialItem.querySelector('.texto h3');
+    var title = testimonialItem.querySelector('.texto h4');
+
+    // Reducir el tamaño de los elementos al hacer clic
+    testimonialItem.classList.toggle('active');
+    name.classList.toggle('active');
+    title.classList.toggle('active');
+    comment.classList.toggle('active');
+  });
+});
+
+
   new Swiper('.testimonials-slider', {
     speed: 600,
     loop: true,
