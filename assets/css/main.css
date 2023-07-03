@@ -3345,6 +3345,7 @@ gap: 20px;
 
 .footer .footer-content {
   padding: 60px 0 30px 0;
+
 }
 
 .footer .footer-content .footer-info {
@@ -3506,6 +3507,27 @@ gap: 20px;
     align-items: center;
     justify-content: center;
   } 
+
+  .footer .footer-content {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .footer .footer-content .footer-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }  
+  .copyright{
+    font-size: 14px;
+  }
+
+  .smallText{
+    display: flex;
+    flex-direction: column;
+  }
+
 }
 
 /*PRUEBAS*/
