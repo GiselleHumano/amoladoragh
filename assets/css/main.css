@@ -1187,6 +1187,7 @@ padding-top: 400px;
 }
 
 .featured-services .row{
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
   padding: 0px 100px;
   background-color:  var(--color-default);
   justify-content: center;
